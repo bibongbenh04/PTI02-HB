@@ -1,23 +1,16 @@
 [
      {
-          "id_movie": "1",
-          "name_movie": "1",
-          "date": "1",
-          "score_ranking": "1",
-          "link_movie": "1"
+          "id_movie": "1000",
+          "name_movie": "Phim Sieu Cap Vip Pro",
+          "date": "29102004",
+          "score_ranking": "10",
+          "link_movie": "123"
      },
      {
-          "id_movie": "1",
-          "name_movie": "1",
-          "date": "1",
-          "score_ranking": "1",
-          "link_movie": "1"
-     },
-     {
-          "id_movie": "1",
-          "name_movie": "1",
-          "date": "1",
-          "score_ranking": "1",
-          "link_movie": "1"
+          "id_movie": "1000",
+          "name_movie": "Phim Sieu Cap Vip Pro 2",
+          "date": "29102004",
+          "score_ranking": "10",
+          "link_movie": "123"
      }
 ]

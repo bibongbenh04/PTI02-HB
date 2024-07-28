@@ -36,6 +36,17 @@ class ListMovie:
     def add_movie(self, Movie):
         self.list.append(Movie)
         self.saveAllMovies()
+    def delete_movies_by_name(self, name_movie):
+        for movie in self.list:
+            if movie.getName() == name_movie:
+                self.list.remove(movie)
+        self.saveAllMovies()
+    def edit_movie_by_name(self, name_old_movie:str, new_movie:Movie):
+        for movie in self.list:
+            if movie.getName() == name_old_movie:
+                self.list.remove(movie)      
+                self.list.append(new_movie)
+        self.saveAllMovies()
     def show_all_movie(self):
         for i in self.list:
             i.show()
@@ -50,6 +61,13 @@ class ListMovie:
             jsonfile.append(movie.__dict__)
         with open("data/movies.json", 'w') as file:
             json.dump(jsonfile, file, indent=5) 
+    def searchMovieByName(self, name)->list:
+        result = []
+        for movie in self.list:
+            if name in movie.getName():
+                result.append(movie)
+                movie.show()
+        return result
 
 l  = ListMovie()
-l.add_movie(Movie("1","1","1","1","1"))
+l.edit_movie_by_name("1", Movie("1000", "Phim Sieu Cap Vip Pro", "29102004", "10", "123"))
