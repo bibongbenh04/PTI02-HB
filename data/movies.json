@@ -12,5 +12,12 @@
           "date": "29102004",
           "score_ranking": "10",
           "link_movie": "123"
+     },
+     {
+          "id_movie": "Null",
+          "name_movie": "Goku",
+          "date": "1/1/2000",
+          "score_ranking": "123",
+          "link_movie": "123"
      }
 ]
