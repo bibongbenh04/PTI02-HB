@@ -7,17 +7,24 @@
           "link_movie": "123"
      },
      {
-          "id_movie": "1000",
-          "name_movie": "Phim Sieu Cap Vip Pro 2",
-          "date": "29102004",
-          "score_ranking": "10",
+          "id_movie": "Null",
+          "name_movie": "Goku sau khi sua",
+          "date": "1/1/2000",
+          "score_ranking": "1010101010",
+          "link_movie": "10101010101010"
+     },
+     {
+          "id_movie": "Null",
+          "name_movie": "Songoku",
+          "date": "1/1/2000",
+          "score_ranking": "100000",
           "link_movie": "123"
      },
      {
           "id_movie": "Null",
-          "name_movie": "Goku",
+          "name_movie": "KAKAKAKAKKAKA",
           "date": "1/1/2000",
-          "score_ranking": "123",
-          "link_movie": "123"
+          "score_ranking": "1010101",
+          "link_movie": "1010101010"
      }
 ]

@@ -36,6 +36,10 @@ class ListMovie:
     def add_movie(self, Movie):
         self.list.append(Movie)
         self.saveAllMovies()
+    def getMovieByName(self, name_movie):
+        for movie in self.list:
+            if movie.getName() == name_movie:
+                return movie
     def delete_movies_by_name(self, name_movie):
         for movie in self.list:
             if movie.getName() == name_movie:

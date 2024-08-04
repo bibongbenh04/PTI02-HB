@@ -1,5 +1,6 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton, QLabel, QDialog
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton,QLineEdit, QLabel, QDialog
 from PyQt6 import uic
+from PyQt6.QtCore import QDate, QDateTime
 import sys
 
 from model.movies import Movie, ListMovie
@@ -20,7 +21,28 @@ class AddDialog(QDialog):
 class EditDialog(QDialog):
     def __init__(self):
         super().__init__()
+        self.oldMovie = None
         uic.loadUi("./ui/editdialog.ui",self)
+        self.btnBox.accepted.connect(self.setNewMovie)
+
+    def setOldMovie(self, movie:Movie):
+        # Dat Ten Objects cho dung
+        self.oldMovie = movie
+        self.txtName.setText(movie.getName())
+        date_str = movie.getDate()
+        date = QDate.fromString(date_str, "yyyy-MM-dd")
+        self.txtDate.setDate(date)
+        self.txtScore.setText(movie.getScore())
+        self.txtUrl.setText(movie.getLink())
+
+    def setNewMovie(self):
+        # Xoa Movie cu
+        self.l = ListMovie()
+        self.l.delete_movies_by_name(self.oldMovie.getName())
+        # Them Movie Moi
+        self.l.add_movie(Movie("Null", self.txtName.text(), self.txtDate.text(), self.txtScore.text(), self.txtUrl.text()))
+        home.callAfterInit()
+        self.close()
 
     def exit(self):
         self.close()
@@ -41,7 +63,9 @@ class HomeMenuDashboard(QMainWindow, Ui_MainWindow):
     def showAddDialog(self):
         add.show()
     def showEditDialog(self):
-        edit.show()
+        if self.test.currentRow():
+            edit.show()
+            edit.setOldMovie(self.l.getMovieByName(self.test.currentItem().text()))
         
     def callAfterInit(self):
         self.l = ListMovie()
