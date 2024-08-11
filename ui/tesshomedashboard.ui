@@ -17,8 +17,8 @@
    <widget class="QListWidget" name="test">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
+      <x>100</x>
+      <y>200</y>
       <width>501</width>
       <height>441</height>
      </rect>
@@ -27,8 +27,8 @@
    <widget class="QPushButton" name="btnAddDialog">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>20</y>
+      <x>120</x>
+      <y>160</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -40,8 +40,8 @@
    <widget class="QPushButton" name="btnEditDialog">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>20</y>
+      <x>290</x>
+      <y>160</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -53,14 +53,37 @@
    <widget class="QPushButton" name="btnDelete">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>20</y>
+      <x>440</x>
+      <y>160</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSearch">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>80</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kinh luc</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtValueSearch">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>80</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
     </property>
    </widget>
   </widget>

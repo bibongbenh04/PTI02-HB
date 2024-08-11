@@ -55,6 +55,13 @@ class HomeMenuDashboard(QMainWindow, Ui_MainWindow):
         self.btnDelete.clicked.connect(self.deleteMovie)
         self.btnEditDialog.clicked.connect(self.showEditDialog)
         self.btnAddDialog.clicked.connect(self.showAddDialog)
+        self.btnSearch.clicked.connect(self.searchMovie)
+    def searchMovie(self):
+        valueSearch = self.txtValueSearch.text()
+        dataSearch = self.l.searchMovieByName(valueSearch) #--> list object
+        self.test.clear()
+        for mov in dataSearch:
+            self.test.addItem(mov.getName())
     def deleteMovie(self):
         nameMovieDetete = self.test.currentItem().text()
         self.test.takeItem(self.test.currentRow())
